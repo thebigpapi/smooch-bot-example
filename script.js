@@ -10,25 +10,25 @@ module.exports = new Script({
 
     start: {
         receive: (bot) => {
-            return bot.say('Hi! I\'m Smooch Bot!')
-                .then(() => 'askName');
+            return bot.say('Hi! I\'m the Donald Bot')
+                .then(() => 'askfirstName');
         }
     },
 
-    askName: {
-        prompt: (bot) => bot.say('What\'s your name?'),
+    askfirstName: {
+        prompt: (bot) => bot.say('What\'s your first name?'),
         receive: (bot, message) => {
-            const name = message.text;
-            return bot.setProp('name', name)
-                .then(() => bot.say(`Great! I'll call you ${name}`))
+            const firstName = message.text;
+            return bot.setProp('firstName', firstName)
+                .then(() => bot.say(`Great! I'll call you ${firstName}`))
                 .then(() => 'finish');
         }
     },
 
     finish: {
         receive: (bot, message) => {
-            return bot.getProp('name')
-                .then((name) => bot.say(`Sorry ${name}, my creator didn't ` +
+            return bot.getProp('firstName')
+                .then((firstName) => bot.say(`Sorry ${firstName}, my creator didn't ` +
                         'teach me how to do anything else!'))
                 .then(() => 'finish');
         }
