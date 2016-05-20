@@ -1,6 +1,6 @@
-# SmoochBot Examples
+# Trump-Bot Examples
 
-A set of example chat bots built on [smooch/smooch-bot](https://github.com/thebigpapi/trump-bot).
+A set of example chat bots built on [thebigpapi/trump-bot](https://github.com/thebigpapi/trump-bot).
 
 Before you get started with any of these samples, from this directory you should:
 
